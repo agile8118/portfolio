@@ -1,0 +1,27 @@
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, #34495ee3, #2c3e50c2),
+    url(../img/header.jpg);
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
+
+  &__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
+
+  &__logo {
+    height: 4.5rem;
+  }
+
+  &__text-box {
+    font-size: 1.6rem;
+    color: #fff;
+    width: 55%;
+    padding-top: 30rem;
+    padding-left: 4rem;
+  }
+}

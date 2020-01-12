@@ -1,0 +1,16 @@
+.section-tasks {
+  padding: 25rem 0;
+  margin-top: -20rem;
+  background-color: #f7f7f7;
+}
+
+.section-projects {
+  transform: skewY(-7deg);
+  padding: 15rem 0;
+  margin-top: -12rem;
+  background-color: #98a0a8;
+
+  h2 {
+    transform: skewY(7deg);
+  }
+}

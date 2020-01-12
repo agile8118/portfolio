@@ -1,0 +1,35 @@
+.tasks {
+  font-size: 1.6rem;
+  width: 45%;
+  margin: 2rem auto;
+}
+
+.task {
+  display: inline-block;
+  margin-bottom: 4.5rem;
+  text-align: left;
+  position: relative;
+
+  &__icon {
+    width: 5%;
+    height: 3rem;
+    display: inline-block;
+
+    span {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 500px;
+      background-color: #2c3e50;
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__text {
+    width: 94%;
+    height: 3rem;
+    display: inline-block;
+  }
+}
