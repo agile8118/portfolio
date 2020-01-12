@@ -1,8 +1,13 @@
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
 @import "base/base";
 @import "base/typography";
 @import "base/utilities";
 
 @import "layout/header";
 @import "layout/home";
+@import "layout/grid";
 
 @import "components/tasks";
+@import "components/projects";

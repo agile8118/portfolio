@@ -7,10 +7,54 @@
 .section-projects {
   transform: skewY(-7deg);
   padding: 15rem 0;
+  padding-bottom: 30rem;
   margin-top: -12rem;
-  background-color: #98a0a8;
+  background-color: #afb9c2;
+}
 
-  h2 {
-    transform: skewY(7deg);
+.section-skills {
+  padding: 15rem 0;
+  margin-top: -12rem;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.438),
+      rgba(0, 0, 0, 0.349)
+    ),
+    url(../img/coffee.jpg);
+  background-size: cover;
+  background-position: center;
+  transform: skewY(-7deg);
+  // background-attachment: fixed   ;
+  position: relative;
+
+  .section-heading {
+    h2,
+    p {
+      color: #fff;
+    }
+
+    h2::after {
+      background-color: #fff;
+    }
+  }
+}
+
+.section-heading {
+  transform: skewY(7deg);
+
+  .heading-secondary:after {
+    display: block;
+    height: 2px;
+    background-color: #34495e;
+    content: " ";
+    width: 10rem;
+    margin: 0 auto;
+    margin-top: 2.5rem;
+  }
+  p {
+    font-size: 1.6rem;
+    margin-top: 2.5rem;
+    color: #34495e;
+    margin-bottom: 4rem;
   }
 }
