@@ -4,8 +4,13 @@
     url(../img/header.jpg);
   background-size: cover;
   background-position: center;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  // transform: skewY(-7deg);
+  // margin-top: -15rem;
+  // & > * {
+  // transform: skewY(7deg);
+  // }
 
   &__logo-box {
     position: absolute;

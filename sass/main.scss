@@ -4,10 +4,16 @@
 @import "base/base";
 @import "base/typography";
 @import "base/utilities";
+@import "base/singles";
 
 @import "layout/header";
 @import "layout/home";
 @import "layout/grid";
+@import "layout/footer";
 
 @import "components/tasks";
 @import "components/projects";
+@import "components/skills";
+@import "components/form";
+@import "components/button";
+@import "components/info";

@@ -1,0 +1,20 @@
+.skills {
+  margin-top: 6rem;
+  margin-bottom: 8rem;
+}
+
+.skill {
+  background-color: #fff;
+  font-size: 1.8rem;
+  border-radius: 5px;
+  padding: 0.9rem 1.2rem;
+  margin: 1.2rem;
+  display: inline-block;
+  width: 17rem;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    box-shadow: 0 0px 10px 5px rgba(0, 0, 0, 0.8);
+  }
+}

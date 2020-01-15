@@ -1,0 +1,21 @@
+.footer {
+  background-color: #333;
+  padding: 2rem 4rem;
+
+  &__text {
+    font-size: 1.4rem;
+    color: #dbdbdb;
+    display: inline-block;
+  }
+
+  &__link {
+    width: 2.1rem;
+    float: right;
+    margin-left: 1.2rem;
+    transition: all 0.2s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

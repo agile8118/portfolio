@@ -1,0 +1,23 @@
+.info {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1.5rem 3rem;
+  margin-top: 3.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 0.5rem 1rem rgba(#000, 0.1);
+
+  h3 {
+    display: inline-block;
+  }
+
+  img {
+    width: 2rem;
+    margin-top: 4px;
+    float: right;
+  }
+
+  &:hover {
+    box-shadow: 0 1rem 1.3rem rgba(#000, 0.2);
+  }
+}
