@@ -85,6 +85,14 @@ body {
   color: #fff;
   font-size: 1.6rem; }
 
+@keyframes animatetop {
+  0% {
+    opacity: 0;
+    transform: scale(1.1); }
+  100% {
+    opacity: 1;
+    transform: scale(1); } }
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, #34495ee3, #2c3e50c2), url(../img/header.jpg);
@@ -283,7 +291,7 @@ body {
   right: 3rem;
   left: 3rem;
   padding: 0.4rem 1.3rem;
-  z-index: 99999999999;
+  z-index: 999;
   opacity: 0;
   transition: all 0.2s;
   background-color: #fdfdfd;
@@ -350,6 +358,8 @@ body {
 
 .skill {
   background-color: #fff;
+  color: #777;
+  text-decoration: none;
   font-size: 1.8rem;
   border-radius: 5px;
   padding: 0.9rem 1.2rem;
@@ -358,7 +368,7 @@ body {
   width: 17rem;
   cursor: pointer;
   transition: all 0.2s; }
-  .skill:hover {
+  .skill:hover, .skill:focus {
     box-shadow: 0 0px 10px 5px rgba(0, 0, 0, 0.8); }
 
 textarea {
@@ -467,3 +477,44 @@ a.button {
     background-color: #e74c3c; }
   .contact-message--success {
     background-color: #2ecc71; }
+
+.mdl {
+  position: fixed;
+  z-index: 9999;
+  padding: 10rem 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  backdrop-filter: blur(9px);
+  background-color: rgba(0, 0, 0, 0.3); }
+  .mdl__content {
+    overflow: hidden;
+    position: relative;
+    background-color: #fff;
+    margin: auto;
+    padding: 0;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3);
+    max-width: 30%;
+    border-radius: 7px;
+    border: 1px solid rgba(0, 0, 0, 0.46);
+    animation: animatetop 0.2s ease; }
+  .mdl__body {
+    padding: 0rem 1.8rem 2rem 1.8rem;
+    font-size: 1.6rem; }
+  .mdl__header {
+    padding: 2rem 2rem 0.6rem 2rem; }
+    .mdl__header h3 {
+      display: inline-block; }
+  .mdl__close {
+    float: right;
+    color: #bebebe;
+    line-height: 0.9;
+    text-decoration: none;
+    font-size: 2.8rem;
+    font-weight: 400;
+    transition: all 0.2s; }
+    .mdl__close:hover, .mdl__close:focus {
+      color: #919191; }

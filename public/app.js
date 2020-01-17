@@ -3,6 +3,7 @@ var contactMsgSuccess = document.querySelector("#contact-message-success");
 var contactMsgErr = document.querySelector("#contact-message-error");
 var sendAgain = document.querySelector("#contact-send-again");
 
+// Send contact information to server
 contactForm.addEventListener("submit", function(e) {
   e.preventDefault();
 
@@ -40,6 +41,7 @@ sendAgain.addEventListener("click", function() {
   document.querySelector("#message").focus();
 });
 
+// Smooth scrolling to the target element
 function smoothScroll(target, duration) {
   var target = document.querySelector(target);
   var targetPostion = target.getBoundingClientRect().top;
@@ -95,6 +97,7 @@ document.addEventListener("click", function(e) {
   }
 });
 
+// Open and close Q&A boxes
 document.querySelectorAll(".info").forEach(function(item) {
   item.addEventListener("click", function() {
     this.classList.toggle("open");
@@ -107,4 +110,21 @@ document.querySelectorAll(".info").forEach(function(item) {
       }
     });
   });
+});
+
+document.querySelectorAll(".skill").forEach(function(item) {
+  item.addEventListener("click", function(e) {
+    var modal = document.querySelector("#modal-skills");
+    document.querySelector("#modal-skills h3").innerHTML = e.target.text;
+    document.querySelector(
+      "#modal-skills .mdl__body"
+    ).innerHTML = e.target.getAttribute("data-desc");
+
+    modal.classList.remove("u-display-none");
+  });
+});
+
+document.querySelector(".mdl__close").addEventListener("click", function(e) {
+  var modalId = e.target.getAttribute("data-target");
+  document.querySelector("#" + modalId).classList.add("u-display-none");
 });

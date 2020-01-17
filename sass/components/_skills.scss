@@ -5,6 +5,8 @@
 
 .skill {
   background-color: #fff;
+  color: #777;
+  text-decoration: none;
   font-size: 1.8rem;
   border-radius: 5px;
   padding: 0.9rem 1.2rem;
@@ -14,7 +16,8 @@
   cursor: pointer;
   transition: all 0.2s;
 
-  &:hover {
+  &:hover,
+  &:focus {
     box-shadow: 0 0px 10px 5px rgba(0, 0, 0, 0.8);
   }
 }
