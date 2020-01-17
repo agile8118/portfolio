@@ -2,10 +2,26 @@
   background-color: #fff;
   border-radius: 8px;
   padding: 1.5rem 3rem;
+  text-decoration: none;
   margin-top: 3.5rem;
   cursor: pointer;
   transition: all 0.2s;
   box-shadow: 0 0.5rem 1rem rgba(#000, 0.1);
+  display: block;
+  width: 100%;
+
+  &.open &__description {
+    display: block;
+  }
+
+  &__description {
+    display: none;
+    transition: height 0.2s;
+    overflow: hidden;
+    font-size: 1.6rem;
+    margin-top: 0.8rem;
+    color: #777;
+  }
 
   h3 {
     display: inline-block;
@@ -17,7 +33,8 @@
     float: right;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     box-shadow: 0 1rem 1.3rem rgba(#000, 0.2);
   }
 }

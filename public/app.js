@@ -84,3 +84,27 @@ window.onscroll = function() {
     }, 200);
   }
 };
+
+// Buttons won't get focused on click
+document.addEventListener("click", function(e) {
+  if (
+    document.activeElement.toString() == "[object HTMLButtonElement]" ||
+    document.activeElement.toString() == "javascript:void(0)"
+  ) {
+    document.activeElement.blur();
+  }
+});
+
+document.querySelectorAll(".info").forEach(function(item) {
+  item.addEventListener("click", function() {
+    this.classList.toggle("open");
+
+    document.querySelectorAll(".info img").forEach(function(item) {
+      if (item.parentElement.classList.contains("open")) {
+        item.src = "/img/up-arrow.svg";
+      } else {
+        item.src = "/img/down-arrow.svg";
+      }
+    });
+  });
+});
