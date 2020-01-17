@@ -39,3 +39,48 @@ sendAgain.addEventListener("click", function() {
   document.querySelector("#message").value = "";
   document.querySelector("#message").focus();
 });
+
+function smoothScroll(target, duration) {
+  var target = document.querySelector(target);
+  var targetPostion = target.getBoundingClientRect().top;
+
+  var startPosition = window.pageYOffset;
+
+  var startTime = null;
+
+  function animation(currentTime) {
+    if (startTime === null) startTime = currentTime;
+    var timeElapsed = currentTime - startTime;
+    var run = ease(timeElapsed, startPosition, targetPostion, duration);
+    window.scrollTo(0, run);
+    if (timeElapsed < duration) requestAnimationFrame(animation);
+  }
+
+  function ease(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return (c / 2) * t * t * t * t + b;
+    t -= 2;
+    return (-c / 2) * (t * t * t * t - 2) + b;
+  }
+
+  requestAnimationFrame(animation);
+}
+
+window.onscroll = function() {
+  var scrollBarPosition = window.pageYOffset | document.body.scrollTop;
+
+  // At specifiv position do what you want
+  if (scrollBarPosition > document.querySelector("#tasks").offsetTop + 120) {
+    // add sticky nav
+    document.querySelector("#sticky-nav").classList.remove("u-display-none");
+    setTimeout(function() {
+      document.querySelector("#sticky-nav").style.opacity = 1;
+    }, 200);
+  } else {
+    // remove sticky nav
+    document.querySelector("#sticky-nav").style.opacity = 0;
+    setTimeout(function() {
+      document.querySelector("#sticky-nav").classList.add("u-display-none");
+    }, 200);
+  }
+};

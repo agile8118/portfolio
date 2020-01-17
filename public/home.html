@@ -22,6 +22,12 @@
   </head>
 
   <body>
+
+    <nav class="sticky-nav u-display-none" id="sticky-nav">
+      <a href="/"><img src="/img/logo.png" alt="Logo" class="nav__logo" /></a>
+      <a href="#contact" class="button nav__button" onclick="smoothScroll('#contact', 1000)">Contact Me</a>
+    </nav>
+
     <header class="header">
       <div class="header__logo-box">
         <img src="/img/logo.png" alt="Logo" class="header__logo" />
@@ -41,7 +47,7 @@
     </header>
 
     <main>
-      <section class="section-tasks">
+      <section class="section-tasks" id="tasks">
         <div class="u-text-center">
           <h2 class="heading-secondary u-margin-bottom-md">What I do</h2>
           <div class="tasks">
