@@ -7,13 +7,13 @@
 
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
 
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
-    <link rel="manifest" href="favicons/site.webmanifest">
-    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="favicons/favicon.ico">
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicons/favicon.ico">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
@@ -24,7 +24,7 @@
   <body>
     <header class="header">
       <div class="header__logo-box">
-        <img src="img/logo.png" alt="Logo" class="header__logo" />
+        <img src="/img/logo.png" alt="Logo" class="header__logo" />
       </div>
       <div class="header__text-box">
         <h1 class="heading-primary u-margin-bottom-xs">Introducing myself</h1>
@@ -148,38 +148,38 @@
           <div class="row">
             <div class="col-md-1-of-2 col-lg-1-of-2">
               <div class="project">
-                <img src="img/pagher.png" alt="">
+                <img src="/img/pagher.png" alt="">
               </div>
             </div>
 
             <div class="col-md-1-of-2 col-lg-1-of-2">
               <div class="project">
-                <img src="img/url-shortener.png" alt="">
+                <img src="/img/url-shortener.png" alt="">
               </div>
             </div>
 
             <div class="col-md-1-of-2 col-lg-1-of-2">
               <div class="project">
-                <img src="img/stopwatch.png" alt="">
+                <img src="/img/stopwatch.png" alt="">
               </div>
             </div>
 
             <div class="col-md-1-of-2 col-lg-1-of-2">
               <div class="project">
-                <img src="img/solod-backgroud-download.png" alt="">
+                <img src="/img/solod-backgroud-download.png" alt="">
               </div>
             </div>
 
             <div class="col-md-1-of-2-full col-lg-1-of-2-full">
               <div class="project">
-                <img src="img/rr.png" alt="">
+                <img src="/img/rr.png" alt="">
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section-contact">
+      <section class="section-contact" id="contact">
         <div class="u-text-center section-heading">
           <h2 class="heading-secondary">Contact Me</h2>
           <p>I am open to any remote jobs, connections, contributing on projects, collaborating, teaching, helping and
@@ -188,7 +188,7 @@
             free to ask me anything you want.</p>
         </div>
         <div class="container">
-          <form class="form">
+          <form class="form" id="contact-form">
             <div class="form__group">
               <input type="text" id="name" placeholder="Full name" name="name" class="form__input" autocomplete="off"
                 required>
@@ -206,6 +206,21 @@
             </div>
             <button class="button" type="submit">Send &rarr;</button>
           </form>
+          <div class="contact-message contact-message--success u-display-none" id="contact-message-success">
+            <strong>Your message was successfully delivered.</strong>
+            <p class="u-margin-bottom-sm"> I'll respond to you as soon as possible.
+              Thanks for contacting.
+            </p>
+            <button class="button u-margin-bottom-xs" id="contact-send-again">Send another</button>
+          </div>
+          <div class="contact-message contact-message--error u-display-none" id="contact-message-error">
+            <strong>Sorry something unexpected happened!</strong>
+            <p class="u-margin-bottom-sm"> Please try again and if the issue was still there you can reach me directly
+              with eamil.
+            </p>
+            <a class="button u-margin-bottom-xs" href="#contact" onclick="location.reload()">Try
+              again</a>
+          </div>
           <br>
           <h3 class="heading-tertiary u-margin-top-sm">If you prefere to contact me directly throw email:</h3>
           <strong class="text">agile.8272@gmail.com</strong>
@@ -218,16 +233,17 @@
             <strong>Whatsapp</strong> and <strong>Skype</strong>. Contact me throw email so we can schedule a call.</p>
 
           <div class="info">
-            <h3 class="heading-tertiary">How I do remote jobs? </h3><img src="img/down-arrow.svg" alt="">
+            <h3 class="heading-tertiary">How I do remote jobs? </h3><img src="/img/down-arrow.svg" alt="">
           </div>
 
           <div class="info">
-            <h3 class="heading-tertiary">How can I teach you web development and programming?</h3><img
-              src="img/down-arrow.svg" alt="">
+            <h3 class="heading-tertiary">How I can teach you web development and programming?</h3><img
+              src="/img/down-arrow.svg" alt="">
           </div>
 
           <div class="info">
-            <h3 class="heading-tertiary">How can I help you with your project?</h3><img src="img/down-arrow.svg" alt="">
+            <h3 class="heading-tertiary">How I can help you with your project?</h3><img src="/img/down-arrow.svg"
+              alt="">
           </div>
         </div>
       </section>
@@ -236,10 +252,12 @@
 
     <footer class="footer">
       <p class="footer__text">Copyright &copy; 2020 Joseph Heidari.</p>
-      <a class="footer__link" href="mailto:agile.8272@gmail.com"><img src="img/google.svg" alt=""></a>
+      <a class="footer__link" href="mailto:agile.8272@gmail.com"><img src="/img/google.svg" alt=""></a>
       <a class="footer__link" href="https://linkedin.com/in/joseph-h-065ba3198" target="_blank"><img
-          src="img/linkedin.svg" alt=""></a>
+          src="/img/linkedin.svg" alt=""></a>
     </footer>
+
+    <script src="/app.js"></script>
   </body>
 
 </html>

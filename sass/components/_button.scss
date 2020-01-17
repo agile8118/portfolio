@@ -5,8 +5,11 @@
   border-radius: 500px;
   padding: 1.2rem 2rem;
   cursor: pointer;
-  font-size: 1.6rem;
   transition: all 0.2s;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.6rem;
+  font-family: inherit;
 
   &:hover {
     background-color: #263544;
@@ -16,4 +19,8 @@
     outline: none;
     background-color: #263544;
   }
+}
+
+a.button {
+  padding: 0.8rem 2rem;
 }

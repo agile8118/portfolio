@@ -77,6 +77,9 @@ body {
 .u-margin-top-sm {
   margin-top: 2rem; }
 
+.u-display-none {
+  display: none; }
+
 .a-2 {
   color: #fff;
   font-size: 1.6rem; }
@@ -382,13 +385,19 @@ textarea {
   border-radius: 500px;
   padding: 1.2rem 2rem;
   cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: inline-block;
   font-size: 1.6rem;
-  transition: all 0.2s; }
+  font-family: inherit; }
   .button:hover {
     background-color: #263544; }
   .button:focus {
     outline: none;
     background-color: #263544; }
+
+a.button {
+  padding: 0.8rem 2rem; }
 
 .info {
   background-color: #fff;
@@ -406,3 +415,15 @@ textarea {
     float: right; }
   .info:hover {
     box-shadow: 0 1rem 1.3rem rgba(0, 0, 0, 0.2); }
+
+.contact-message {
+  color: #fff;
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: -3rem; }
+  .contact-message--error {
+    background-color: #e74c3c; }
+  .contact-message--success {
+    background-color: #2ecc71; }
