@@ -25,7 +25,7 @@
 
     <nav class="sticky-nav u-display-none" id="sticky-nav">
       <a href="/"><img src="/img/logo.png" alt="Logo" class="nav__logo" /></a>
-      <a href="#contact" class="button nav__button" onclick="smoothScroll('#contact', 1000)">Contact Me</a>
+      <a href="javascript:void(0)" class="button nav__button" onclick="smoothScroll('#contact', 1000)">Contact Me</a>
     </nav>
 
     <header class="header">
@@ -215,33 +215,44 @@
         <div class="projects">
           <div class="row">
             <div class="col-md-1-of-2 col-lg-1-of-2">
-              <div class="project">
+              <a href="javascript:void(0)" data-title="Pagher" data-technologies="Node.js-MongoDB-React-C++-MYSQL"
+                data-plink="https://pagher.com" data-slink="sdf" data-img="/img/pagher.png"
+                data-text='<p>First Paraghtaph</p><p>Second Paraghraph</p>' class="project">
                 <img src="/img/pagher.png" alt="">
-              </div>
+              </a>
             </div>
 
             <div class="col-md-1-of-2 col-lg-1-of-2">
-              <div class="project">
+              <a href="javascript:void(0)" data-title="URL Shortener" data-technologies="Node.js-React-MYSQL-SASS-AWS"
+                data-plink="https://shorter.guru/" data-slink="sdf" data-img="/img/url-shortener.png"
+                data-text='<p>First Paraghtaph</p><p>Second Paraghraph</p>' class="project">
                 <img src="/img/url-shortener.png" alt="">
-              </div>
+              </a>
             </div>
 
             <div class="col-md-1-of-2 col-lg-1-of-2">
-              <div class="project">
+              <a href="javascript:void(0)" data-title="Stopwatch" data-technologies="CSS-JavaScript-HTML"
+                data-plink="https://pagher.com" data-slink="sdf" data-img="/img/stopwatch.png"
+                data-text='<p>First Paraghtaph</p><p>Second Paraghraph</p>' class="project">
                 <img src="/img/stopwatch.png" alt="">
-              </div>
+              </a>
             </div>
 
             <div class="col-md-1-of-2 col-lg-1-of-2">
-              <div class="project">
+              <a href="javascript:void(0)" data-title="Solid Background Color Download"
+                data-technologies="CSS-JavaScript-HTML" data-plink="https://pagher.com" data-slink="sdf"
+                data-img="/img/solod-backgroud-download.png" data-text='<p>First Paraghtaph</p><p>Second Paraghraph</p>'
+                class="project">
                 <img src="/img/solod-backgroud-download.png" alt="">
-              </div>
+              </a>
             </div>
 
             <div class="col-md-1-of-2-full col-lg-1-of-2-full">
-              <div class="project">
+              <a href="javascript:void(0)" data-title="Rolling Records" data-technologies="Node.js-MongoDB-SASS"
+                data-plink="https://www.rollingrecords.fi/" data-img="/img/rr.png"
+                data-text='<p>First Paraghtaph</p><p>Second Paraghraph</p>' class="project">
                 <img src="/img/rr.png" alt="">
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -347,6 +358,38 @@
           <a href="javascript:void(0)" data-target="modal-skills" class="mdl__close">&times;</a>
         </div>
         <div class="mdl__body"></div>
+      </div>
+    </div>
+
+    <div class="mdl mdl--big u-display-none" id="modal-projects">
+      <div class="mdl__content">
+        <div class="mdl__header">
+          <h3 class="heading-tertiary"></h3>
+          <a href="javascript:void(0)" data-target="modal-projects" class="mdl__close">&times;</a>
+        </div>
+        <div class="mdl__body">
+          <img src="/img/pagher.png" class="u-margin-top-xs" alt="">
+          <div class="mdl__text u-margin-top-xs u-margin-bottom-xs">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quam, ut ipsa nulla earum incidunt et
+              possimus itaque hic aspernatur ducimus, eaque velit minus voluptas laudantium! Tempore asperiores magnam
+              quisquam.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quam, ut ipsa nulla earum incidunt et
+              possimus itaque hic aspernatur ducimus, eaque velit minus voluptas laudantium! Tempore asperiores magnam
+              quisquam.</p>
+            <p>Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit accusantium sequi autem
+              soluta quos sed obcaecati delectus suscipit, veniam repellat facere? Voluptatem dicta nostrum ab nobis
+              quam
+              aperiam ad dolores! sit amet consectetur adipisicing elit. Dolorem quam, ut ipsa nulla earum incidunt et
+              possimus itaque hic aspernatur ducimus, eaque velit minus voluptas laudantium! Tempore asperiores magnam
+              quisquam.</p>
+          </div>
+          <h4>Technology Used:</h4>
+          <div class="technologies"></div>
+          <div class="u-margin-top-sm">
+            <a href="" class="link-complete" target="_blank">Go to Project &rarr;</a>
+            <a href="" class="link-complete" target="_blank">Go to Source Code &rarr;</a>
+          </div>
+        </div>
       </div>
     </div>
 

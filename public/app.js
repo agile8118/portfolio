@@ -124,7 +124,58 @@ document.querySelectorAll(".skill").forEach(function(item) {
   });
 });
 
-document.querySelector(".mdl__close").addEventListener("click", function(e) {
-  var modalId = e.target.getAttribute("data-target");
-  document.querySelector("#" + modalId).classList.add("u-display-none");
+document.querySelectorAll(".project").forEach(function(item) {
+  item.addEventListener("click", function(e) {
+    var modal = document.querySelector("#modal-projects");
+    var plink = this.getAttribute("data-plink");
+    var slink = this.getAttribute("data-slink");
+    var img = this.getAttribute("data-img");
+    var title = this.getAttribute("data-title");
+    var desc = this.getAttribute("data-text");
+    var technologies = this.getAttribute("data-technologies").split("-");
+
+    // Set title
+    document.querySelector("#modal-projects h3").innerHTML = title;
+
+    // Set project link
+    document.querySelectorAll("#modal-projects .link-complete")[0].href = plink;
+
+    // Add the link to porject source code
+    if (slink) {
+      document.querySelectorAll(
+        "#modal-projects .link-complete"
+      )[1].href = slink;
+      document
+        .querySelectorAll("#modal-projects .link-complete")[1]
+        .classList.remove("u-display-none");
+    } else {
+      document
+        .querySelectorAll("#modal-projects .link-complete")[1]
+        .classList.add("u-display-none");
+    }
+
+    // Set img
+    document.querySelector("#modal-projects img").src = img;
+
+    // Set description
+    document.querySelector("#modal-projects .mdl__text").innerHTML = desc;
+
+    // Add technologies used
+    document.querySelector("#modal-projects .technologies").innerHTML = "";
+    technologies.forEach(function(item) {
+      var div = document.createElement("div");
+      div.setAttribute("class", "skill-sm");
+      div.textContent = item;
+      document.querySelector("#modal-projects .technologies").append(div);
+    });
+
+    modal.classList.remove("u-display-none");
+  });
+});
+
+document.querySelectorAll(".mdl__close").forEach(function(item) {
+  item.addEventListener("click", function(e) {
+    var modalId = e.target.getAttribute("data-target");
+    document.querySelector("#" + modalId).classList.add("u-display-none");
+  });
 });

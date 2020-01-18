@@ -11,6 +11,20 @@
   backdrop-filter: blur(9px);
   background-color: rgba(0, 0, 0, 0.3);
 
+  &--big &__content {
+    max-width: 50%;
+  }
+
+  &--big &__header {
+    border-bottom: 1px solid #eee;
+    padding: 1.8rem 2rem;
+  }
+
+  &--big &__body {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
+
   &__content {
     overflow: hidden;
     position: relative;
@@ -27,6 +41,10 @@
   &__body {
     padding: 0rem 1.8rem 2rem 1.8rem;
     font-size: 1.6rem;
+
+    p:not(:last-child) {
+      padding-bottom: 0.5rem;
+    }
   }
 
   &__header {
