@@ -115,10 +115,11 @@ document.querySelectorAll(".info").forEach(function(item) {
 document.querySelectorAll(".skill").forEach(function(item) {
   item.addEventListener("click", function(e) {
     var modal = document.querySelector("#modal-skills");
-    document.querySelector("#modal-skills h3").innerHTML = e.target.text;
+    document.querySelector("#modal-skills h3").innerHTML =
+      this.getAttribute("data-title") || e.target.text;
     document.querySelector(
       "#modal-skills .mdl__body"
-    ).innerHTML = e.target.getAttribute("data-desc");
+    ).innerHTML = this.getAttribute("data-desc");
 
     modal.classList.remove("u-display-none");
   });

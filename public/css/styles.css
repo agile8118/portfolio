@@ -42,6 +42,9 @@ body {
   display: block;
   font-weight: 400;
   letter-spacing: 0.4rem; }
+  @media only screen and (max-width: 400px) {
+    .heading-primary {
+      font-size: 3rem; } }
 
 .heading-secondary {
   font-size: 2.8rem;
@@ -138,11 +141,14 @@ body {
       clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
   @media only screen and (max-width: 600px) {
     .header {
-      clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%); } }
+      clip-path: none; } }
   .header__logo-box {
     position: absolute;
     top: 4rem;
     left: 4rem; }
+    @media only screen and (max-width: 420px) {
+      .header__logo-box {
+        left: 3rem; } }
   .header__logo {
     height: 4.5rem; }
   .header__text-box {
@@ -163,6 +169,11 @@ body {
     @media only screen and (max-width: 740px) {
       .header__text-box {
         width: 100%; } }
+    @media only screen and (max-width: 420px) {
+      .header__text-box {
+        top: 50%;
+        padding-left: 3rem;
+        padding-right: 3rem; } }
 
 .section-tasks {
   padding: 25rem 0;
@@ -170,12 +181,8 @@ body {
   background-color: #f7f7f7; }
   @media only screen and (max-width: 900px) {
     .section-tasks {
-      padding-bottom: 18rem; } }
-
-.section-projects {
-  padding: 25rem 0 10rem 0;
-  margin-top: -12rem;
-  background-color: #f7f7f7; }
+      padding-bottom: 18rem;
+      margin-top: -12rem; } }
 
 .section-skills {
   padding: 15rem 0 15rem 0;
@@ -187,14 +194,24 @@ body {
   position: relative; }
   .section-skills > * {
     transform: skewY(7deg); }
+  @media only screen and (max-width: 900px) {
+    .section-skills {
+      transform: skewY(0deg); }
+      .section-skills > * {
+        transform: skewY(0deg); } }
   .section-skills .section-heading h2,
   .section-skills .section-heading p {
     color: #fff; }
   .section-skills .section-heading h2::after {
     background-color: #fff; }
 
+.section-projects {
+  padding: 25rem 0 10rem 0;
+  margin-top: -12rem;
+  background-color: #f7f7f7; }
+
 .section-contact {
-  padding: 10rem 0 8rem 0;
+  padding: 10rem 0 12rem 0;
   background-color: #34495e26; }
 
 .section-heading .heading-secondary:after {
@@ -400,7 +417,10 @@ body {
       width: 70%; } }
   @media only screen and (max-width: 600px) {
     .tasks {
-      width: 80%; } }
+      width: 85%; } }
+  @media only screen and (max-width: 420px) {
+    .tasks {
+      width: 90%; } }
 
 .task {
   display: inline-block;
@@ -430,6 +450,9 @@ body {
     @media only screen and (max-width: 600px) {
       .task__text {
         padding-left: 1.5rem; } }
+    @media only screen and (max-width: 420px) {
+      .task__text {
+        padding-left: 2rem; } }
 
 .project {
   margin: 3rem 0;
@@ -460,6 +483,16 @@ body {
   width: 17rem;
   cursor: pointer;
   transition: all 0.2s; }
+  @media only screen and (max-width: 470px) {
+    .skill {
+      width: 15rem; } }
+  @media only screen and (max-width: 420px) {
+    .skill {
+      width: 13rem; } }
+  @media only screen and (max-width: 375px) {
+    .skill {
+      width: 17rem;
+      margin: 1.4rem; } }
   .skill:hover, .skill:focus {
     box-shadow: 0 0px 10px 5px rgba(0, 0, 0, 0.8); }
 
@@ -555,6 +588,15 @@ a.button {
     color: #777; }
   .info h3 {
     display: inline-block; }
+    @media only screen and (max-width: 470px) {
+      .info h3 {
+        width: 35rem; } }
+    @media only screen and (max-width: 370px) {
+      .info h3 {
+        width: 30rem; } }
+    @media only screen and (max-width: 330px) {
+      .info h3 {
+        width: 25rem; } }
   .info img {
     width: 2rem;
     margin-top: 4px;

@@ -13,6 +13,10 @@ body {
   display: block;
   font-weight: 400;
   letter-spacing: 0.4rem;
+
+  @media only screen and (max-width: 400px) {
+    font-size: 3rem;
+  }
 }
 
 .heading-secondary {

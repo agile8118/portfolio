@@ -16,13 +16,17 @@
   }
 
   @media only screen and (max-width: 600px) {
-    clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
+    clip-path: none;
   }
 
   &__logo-box {
     position: absolute;
     top: 4rem;
     left: 4rem;
+
+    @media only screen and (max-width: 420px) {
+      left: 3rem;
+    }
   }
 
   &__logo {
@@ -48,6 +52,12 @@
 
     @media only screen and (max-width: 740px) {
       width: 100%;
+    }
+
+    @media only screen and (max-width: 420px) {
+      top: 50%;
+      padding-left: 3rem;
+      padding-right: 3rem;
     }
   }
 }
