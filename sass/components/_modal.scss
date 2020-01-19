@@ -13,6 +13,18 @@
 
   &--big &__content {
     max-width: 50%;
+
+    @media only screen and (max-width: 1600px) {
+      max-width: 55%;
+    }
+
+    @media only screen and (max-width: 1200px) {
+      max-width: 60%;
+    }
+
+    @media only screen and (max-width: 800px) {
+      max-width: 90%;
+    }
   }
 
   &--big &__header {
@@ -23,6 +35,12 @@
   &--big &__body {
     padding-top: 2rem;
     padding-bottom: 3rem;
+
+    img {
+      border-radius: 4px;
+      display: block;
+      margin: 0 auto;
+    }
   }
 
   &__content {
@@ -36,6 +54,18 @@
     border-radius: 7px;
     border: 1px solid rgba(0, 0, 0, 0.46);
     animation: animatetop 0.2s ease;
+
+    @media only screen and (max-width: 1600px) {
+      max-width: 40%;
+    }
+
+    @media only screen and (max-width: 1200px) {
+      max-width: 50%;
+    }
+
+    @media only screen and (max-width: 800px) {
+      max-width: 70%;
+    }
   }
 
   &__body {

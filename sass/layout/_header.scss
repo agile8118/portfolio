@@ -7,6 +7,18 @@
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
+  @media only screen and (max-width: 1200px) {
+    clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+  }
+
+  @media only screen and (max-width: 900px) {
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
+
+  @media only screen and (max-width: 600px) {
+    clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
+  }
+
   &__logo-box {
     position: absolute;
     top: 4rem;
@@ -21,7 +33,21 @@
     font-size: 1.6rem;
     color: #fff;
     width: 55%;
-    padding-top: 30rem;
     padding-left: 4rem;
+    padding-right: 4rem;
+    position: absolute;
+    top: 46%;
+    transform: translateY(-50%);
+
+    @media only screen and (max-width: 1500px) {
+      width: 63%;
+    }
+    @media only screen and (max-width: 1000px) {
+      width: 70%;
+    }
+
+    @media only screen and (max-width: 740px) {
+      width: 100%;
+    }
   }
 }

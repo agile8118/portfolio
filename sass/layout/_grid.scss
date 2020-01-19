@@ -6,9 +6,33 @@
 	xxs <= 360
 */
 
+.container {
+  width: 50%;
+  margin: 6rem auto;
+
+  @media only screen and (max-width: 1680px) {
+    width: 70%;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    width: 85%;
+  }
+
+  @media only screen and (max-width: 700px) {
+    margin: 3rem auto;
+
+    width: 93%;
+  }
+}
+
 .row {
   max-width: $grid-width;
   margin: 0 auto;
+  padding: 0 2.5rem;
+
+  @media only screen and (max-width: 700px) {
+    padding: 0 3rem;
+  }
 
   @include clearfix;
 
@@ -22,7 +46,7 @@
   }
 
   .col-md-1-of-2 {
-    @media only screen and (min-width: 760px) and (max-width: 1509px) {
+    @media only screen and (min-width: 1090px) and (max-width: 1509px) {
       width: calc((100% - 1 * #{$gutter-horizontal-big}) / 2);
 
       &:not(:last-child) {
@@ -34,19 +58,7 @@
       }
     }
 
-    @media only screen and (min-width: 760px) and (max-width: 1300px) {
-      width: calc((100% - 1 * #{$gutter-horizontal}) / 2);
-
-      &:not(:last-child) {
-        margin-right: $gutter-horizontal;
-      }
-
-      &:nth-child(2n) {
-        margin-right: 0 !important;
-      }
-    }
-
-    @media only screen and (min-width: 760px) and (max-width: 1090px) {
+    @media only screen and (min-width: 580px) and (max-width: 1090px) {
       width: calc((100% - 1 * #{$gutter-horizontal-small}) / 2);
 
       &:not(:last-child) {
@@ -56,6 +68,11 @@
       &:nth-child(2n) {
         margin-right: 0 !important;
       }
+    }
+
+    @media only screen and (max-width: 580px) {
+      width: 100%;
+      margin-right: 0 !important;
     }
   }
 
@@ -112,9 +129,11 @@
   }
 
   .col-lg-1-of-2-full {
-    @media only screen and (min-width: 1510px) {
-      width: calc((100% - #{$gutter-horizontal}) / 2);
-      margin-left: calc((100% - ((100% - #{$gutter-horizontal}) / 2)) / 2);
+    width: calc((100% - #{$gutter-horizontal}) / 2);
+    margin-left: calc((100% - ((100% - #{$gutter-horizontal}) / 2)) / 2);
+    @media only screen and (max-width: 580px) {
+      margin-left: 0;
+      width: 100%;
     }
   }
 

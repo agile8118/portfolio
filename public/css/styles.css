@@ -6,11 +6,24 @@
   box-sizing: inherit; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 10px; }
+  @media only screen and (min-width: 2900px) {
+    html {
+      font-size: 14px; } }
+  @media only screen and (max-width: 1200px) {
+    html {
+      font-size: 9px; } }
+  @media only screen and (max-width: 900px) {
+    html {
+      font-size: 8px; } }
 
 body {
   box-sizing: border-box;
-  position: relative; }
+  position: relative;
+  padding: 3rem; }
+  @media only screen and (max-width: 900px) {
+    body {
+      padding: 0; } }
 
 img {
   max-width: 100%; }
@@ -19,8 +32,7 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.7;
-  color: #777;
-  padding: 3rem; }
+  color: #777; }
 
 .heading-primary {
   color: #fff;
@@ -118,6 +130,15 @@ body {
   background-position: center;
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  @media only screen and (max-width: 1200px) {
+    .header {
+      clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); } }
+  @media only screen and (max-width: 900px) {
+    .header {
+      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
+  @media only screen and (max-width: 600px) {
+    .header {
+      clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%); } }
   .header__logo-box {
     position: absolute;
     top: 4rem;
@@ -128,13 +149,28 @@ body {
     font-size: 1.6rem;
     color: #fff;
     width: 55%;
-    padding-top: 30rem;
-    padding-left: 4rem; }
+    padding-left: 4rem;
+    padding-right: 4rem;
+    position: absolute;
+    top: 46%;
+    transform: translateY(-50%); }
+    @media only screen and (max-width: 1500px) {
+      .header__text-box {
+        width: 63%; } }
+    @media only screen and (max-width: 1000px) {
+      .header__text-box {
+        width: 70%; } }
+    @media only screen and (max-width: 740px) {
+      .header__text-box {
+        width: 100%; } }
 
 .section-tasks {
   padding: 25rem 0;
   margin-top: -20rem;
   background-color: #f7f7f7; }
+  @media only screen and (max-width: 900px) {
+    .section-tasks {
+      padding-bottom: 18rem; } }
 
 .section-projects {
   padding: 25rem 0 10rem 0;
@@ -183,9 +219,27 @@ body {
 	xs => 360 - 560
 	xxs <= 360
 */
+.container {
+  width: 50%;
+  margin: 6rem auto; }
+  @media only screen and (max-width: 1680px) {
+    .container {
+      width: 70%; } }
+  @media only screen and (max-width: 1200px) {
+    .container {
+      width: 85%; } }
+  @media only screen and (max-width: 700px) {
+    .container {
+      margin: 3rem auto;
+      width: 93%; } }
+
 .row {
   max-width: 114rem;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 0 2.5rem; }
+  @media only screen and (max-width: 700px) {
+    .row {
+      padding: 0 3rem; } }
   .row::after {
     content: "";
     clear: both;
@@ -195,27 +249,24 @@ body {
     min-height: 1px; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
-  @media only screen and (min-width: 760px) and (max-width: 1509px) {
+  @media only screen and (min-width: 1090px) and (max-width: 1509px) {
     .row .col-md-1-of-2 {
       width: calc((100% - 1 * 8rem) / 2); }
       .row .col-md-1-of-2:not(:last-child) {
         margin-right: 8rem; }
       .row .col-md-1-of-2:nth-child(2n) {
         margin-right: 0 !important; } }
-  @media only screen and (min-width: 760px) and (max-width: 1300px) {
-    .row .col-md-1-of-2 {
-      width: calc((100% - 1 * 6rem) / 2); }
-      .row .col-md-1-of-2:not(:last-child) {
-        margin-right: 6rem; }
-      .row .col-md-1-of-2:nth-child(2n) {
-        margin-right: 0 !important; } }
-  @media only screen and (min-width: 760px) and (max-width: 1090px) {
+  @media only screen and (min-width: 580px) and (max-width: 1090px) {
     .row .col-md-1-of-2 {
       width: calc((100% - 1 * 4.5rem) / 2); }
       .row .col-md-1-of-2:not(:last-child) {
         margin-right: 4.5rem; }
       .row .col-md-1-of-2:nth-child(2n) {
         margin-right: 0 !important; } }
+  @media only screen and (max-width: 580px) {
+    .row .col-md-1-of-2 {
+      width: 100%;
+      margin-right: 0 !important; } }
   @media only screen and (min-width: 760px) and (max-width: 1509px) {
     .row .col-md-1-of-4 {
       width: calc((100% - 3 * 8rem) / 4); }
@@ -244,10 +295,13 @@ body {
         margin-right: 0 !important; }
       .row .col-lg-1-of-5:not(:last-child) {
         margin-right: 4.5rem; } }
-  @media only screen and (min-width: 1510px) {
-    .row .col-lg-1-of-2-full {
-      width: calc((100% - 6rem) / 2);
-      margin-left: calc((100% - ((100% - 6rem) / 2)) / 2); } }
+  .row .col-lg-1-of-2-full {
+    width: calc((100% - 6rem) / 2);
+    margin-left: calc((100% - ((100% - 6rem) / 2)) / 2); }
+    @media only screen and (max-width: 580px) {
+      .row .col-lg-1-of-2-full {
+        margin-left: 0;
+        width: 100%; } }
   @media only screen and (min-width: 1510px) {
     .row .col-lg-1-of-2 {
       width: calc((100% - 1 * 6rem) / 2); }
@@ -314,6 +368,10 @@ body {
   transition: all 0.2s;
   background-color: #fdfdfd;
   border-bottom: 1px solid #e9e6e6; }
+  @media only screen and (max-width: 900px) {
+    .sticky-nav {
+      right: 0;
+      left: 0; } }
 
 .nav__logo {
   width: 4rem; }
@@ -334,6 +392,15 @@ body {
   font-size: 1.6rem;
   width: 45%;
   margin: 2rem auto; }
+  @media only screen and (max-width: 1650px) {
+    .tasks {
+      width: 60%; } }
+  @media only screen and (max-width: 980px) {
+    .tasks {
+      width: 70%; } }
+  @media only screen and (max-width: 600px) {
+    .tasks {
+      width: 80%; } }
 
 .task {
   display: inline-block;
@@ -357,6 +424,12 @@ body {
     width: 94%;
     height: 3rem;
     display: inline-block; }
+    @media only screen and (max-width: 1650px) {
+      .task__text {
+        padding-left: 1rem; } }
+    @media only screen and (max-width: 600px) {
+      .task__text {
+        padding-left: 1.5rem; } }
 
 .project {
   margin: 3rem 0;
@@ -372,8 +445,8 @@ body {
       box-shadow: 0px 4px 20px 10px rgba(0, 0, 0, 0.4); }
 
 .skills {
-  margin-top: 6rem;
-  margin-bottom: 8rem; }
+  max-width: 114rem;
+  margin: 6rem auto 8rem auto; }
 
 .skill {
   background-color: #fff;
@@ -400,10 +473,6 @@ body {
 
 textarea {
   resize: none; }
-
-.container {
-  width: 50%;
-  margin: 6rem auto; }
 
 .form__group:not(:last-child) {
   margin-bottom: 1.2rem; }
@@ -519,12 +588,25 @@ a.button {
   background-color: rgba(0, 0, 0, 0.3); }
   .mdl--big .mdl__content {
     max-width: 50%; }
+    @media only screen and (max-width: 1600px) {
+      .mdl--big .mdl__content {
+        max-width: 55%; } }
+    @media only screen and (max-width: 1200px) {
+      .mdl--big .mdl__content {
+        max-width: 60%; } }
+    @media only screen and (max-width: 800px) {
+      .mdl--big .mdl__content {
+        max-width: 90%; } }
   .mdl--big .mdl__header {
     border-bottom: 1px solid #eee;
     padding: 1.8rem 2rem; }
   .mdl--big .mdl__body {
     padding-top: 2rem;
     padding-bottom: 3rem; }
+    .mdl--big .mdl__body img {
+      border-radius: 4px;
+      display: block;
+      margin: 0 auto; }
   .mdl__content {
     overflow: hidden;
     position: relative;
@@ -536,6 +618,15 @@ a.button {
     border-radius: 7px;
     border: 1px solid rgba(0, 0, 0, 0.46);
     animation: animatetop 0.2s ease; }
+    @media only screen and (max-width: 1600px) {
+      .mdl__content {
+        max-width: 40%; } }
+    @media only screen and (max-width: 1200px) {
+      .mdl__content {
+        max-width: 50%; } }
+    @media only screen and (max-width: 800px) {
+      .mdl__content {
+        max-width: 70%; } }
   .mdl__body {
     padding: 0rem 1.8rem 2rem 1.8rem;
     font-size: 1.6rem; }

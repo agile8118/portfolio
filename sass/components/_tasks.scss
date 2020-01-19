@@ -2,6 +2,18 @@
   font-size: 1.6rem;
   width: 45%;
   margin: 2rem auto;
+
+  @media only screen and (max-width: 1650px) {
+    width: 60%;
+  }
+
+  @media only screen and (max-width: 980px) {
+    width: 70%;
+  }
+
+  @media only screen and (max-width: 600px) {
+    width: 80%;
+  }
 }
 
 .task {
@@ -31,5 +43,13 @@
     width: 94%;
     height: 3rem;
     display: inline-block;
+
+    @media only screen and (max-width: 1650px) {
+      padding-left: 1rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+      padding-left: 1.5rem;
+    }
   }
 }
