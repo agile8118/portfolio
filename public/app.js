@@ -5,6 +5,7 @@ var sendAgain = document.querySelector("#contact-send-again");
 
 // Send contact information to server
 contactForm.addEventListener("submit", function(e) {
+  document.querySelector("#loading").classList.remove("u-display-none");
   e.preventDefault();
 
   var name = document.querySelector("#name").value;
@@ -19,11 +20,13 @@ contactForm.addEventListener("submit", function(e) {
           contactForm.classList.add("u-display-none");
           contactMsgErr.classList.add("u-display-none");
           contactMsgSuccess.classList.remove("u-display-none");
+          document.querySelector("#loading").classList.add("u-display-none");
         } catch (e) {}
       } else {
         contactForm.classList.add("u-display-none");
         contactMsgErr.classList.remove("u-display-none");
         contactMsgSuccess.classList.add("u-display-none");
+        document.querySelector("#loading").classList.add("u-display-none");
       }
     }
   };
