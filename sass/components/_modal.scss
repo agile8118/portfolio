@@ -12,14 +12,10 @@
   background-color: rgba(0, 0, 0, 0.3);
 
   &--big &__content {
-    max-width: 50%;
-
-    @media only screen and (max-width: 1600px) {
-      max-width: 55%;
-    }
+    max-width: 100rem;
 
     @media only screen and (max-width: 1200px) {
-      max-width: 60%;
+      max-width: 70%;
     }
 
     @media only screen and (max-width: 800px) {

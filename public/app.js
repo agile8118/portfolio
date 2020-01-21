@@ -115,6 +115,7 @@ document.querySelectorAll(".info").forEach(function(item) {
   });
 });
 
+// Open and customize skill description modal
 document.querySelectorAll(".skill").forEach(function(item) {
   item.addEventListener("click", function(e) {
     var modal = document.querySelector("#modal-skills");
@@ -128,6 +129,7 @@ document.querySelectorAll(".skill").forEach(function(item) {
   });
 });
 
+// Open and customize project description modal
 document.querySelectorAll(".project").forEach(function(item) {
   item.addEventListener("click", function(e) {
     var modal = document.querySelector("#modal-projects");
@@ -159,7 +161,7 @@ document.querySelectorAll(".project").forEach(function(item) {
     }
 
     // Set img
-    document.querySelector("#modal-projects img").src = img;
+    document.querySelector("#modal-projects-img").src = img;
 
     // Set description
     document.querySelector("#modal-projects .mdl__text").innerHTML = desc;
@@ -177,6 +179,7 @@ document.querySelectorAll(".project").forEach(function(item) {
   });
 });
 
+// Close the displayed modal
 document.querySelectorAll(".mdl__close").forEach(function(item) {
   item.addEventListener("click", function(e) {
     var modalId = e.target.getAttribute("data-target");

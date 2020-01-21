@@ -238,7 +238,7 @@ body {
 */
 .container {
   width: 50%;
-  margin: 6rem auto auto; }
+  margin: 5.5rem auto 2rem auto; }
   @media only screen and (max-width: 1680px) {
     .container {
       width: 70%; } }
@@ -631,13 +631,10 @@ a.button {
   backdrop-filter: blur(9px);
   background-color: rgba(0, 0, 0, 0.3); }
   .mdl--big .mdl__content {
-    max-width: 50%; }
-    @media only screen and (max-width: 1600px) {
-      .mdl--big .mdl__content {
-        max-width: 55%; } }
+    max-width: 100rem; }
     @media only screen and (max-width: 1200px) {
       .mdl--big .mdl__content {
-        max-width: 60%; } }
+        max-width: 70%; } }
     @media only screen and (max-width: 800px) {
       .mdl--big .mdl__content {
         max-width: 90%; } }
