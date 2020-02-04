@@ -4,7 +4,6 @@ const bodyParser = require("body-parser");
 const compression = require("compression");
 const helmet = require("helmet");
 const mailgun = require("mailgun-js");
-const keys = require("./keys");
 
 const app = express();
 const publicPath = path.join(__dirname, "/public");
@@ -51,7 +50,7 @@ app.post("/contact", (req, res) => {
 
   // Mailgun configuration
   const mg = mailgun({
-    apiKey: process.env.mailgunApiKey || keys.mailgunApiKey,
+    apiKey: process.env.MAILGUN_API_KEY || require("./keys").mailgunApiKey,
     domain: "sandbox39848b9913124df4adc3bca6ca11e196.mailgun.org"
   });
 

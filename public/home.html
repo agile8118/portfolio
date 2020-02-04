@@ -4,8 +4,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="I am a software engineer specializing in web development with over 4 years of experience. Contact me and let's build and launch something incredible together."/>
 
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" />
+
+    <meta property="og:title" content="Joseph Heidari | Software engineer specializing in web development" />
+    <meta property="og:image" content="/img/logo-big.png" />
+    <meta property="og:description" content="I am a software engineer specializing in web development with over 4 years of experience. Contact me and let's build and launch something incredible together." />
+
+    <title>Joseph Heidari | Software engineer specializing in web development </title>
 
     <link rel="stylesheet" href="/css/styles.css" />
     <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
@@ -18,7 +25,6 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
-    <title>Joseph Heidari | Software engineer specializing in web development </title>
   </head>
 
   <body>
@@ -40,7 +46,7 @@
           programming, algorithms and data structures, problem-solving and building and launching real-world products
           online. </p>
         <p>
-          I always stick to lifetime learning during my career, I am constantly learning about core computer
+          I always stick to lifetime learning during my career, and I am constantly learning about core computer
           concepts, new technologies, how to write better code and how to structure and scale gigantic web applications.
         </p>
         <p>
@@ -64,7 +70,7 @@
                 <strong>Front-end Development: </strong>I develop responsive, modern looking front ends. Most of the
                 time I develope my own CSS frameworks, and in cases that the project needs to be done as fast as
                 possible, I use CSS frameworks written by others like bootstrap, material UI, etc.
-                And as for JavaScript, I am an expert in React and I use it all the time to power rich front end
+                &nbsp;And as for JavaScript, I am an expert in React and I use it all the time to power rich front end
                 applications.
               </p>
             </div>
@@ -203,7 +209,7 @@
               <a href="javascript:void(0)" data-title="Pagher"
                 data-technologies="Node.js-MongoDB-React-C++-MYSQL-SASS-AWS" data-plink="https://pagher.com"
                 data-slink="https://github.com/agile8118/pagher" data-img="/img/pagher-big.png"
-                data-text="<p>This is one of the most complex web applications I've ever done and I can talk about it for hours. It has full authentication, file uploading, image processing, comment systems, full user profile and more.</p><p>You need to create an account to explore the features it offers. 
+                data-text="<p>This is one of the most complex web applications I've ever done and I can talk about it for hours. It has full authentication, file uploading, image processing, comment systems, full user profile and more.</p><p>You need to create an account to explore the features it offers.
                   I've built the entire front-end and back-end from scratch myself. The whole UI is powered by React and I coded all the styles from scratch with pure CSS with the help of SASS.
                   </p><p>The back-end is designed with Node.js, MongoDB, MYSQL and C++. I use C++ for image processing for the best performance.</p><p>This app is still in the development stage and you may not feel so comfortable working with it. I still need to fix a couple of bugs, add more features, deploy it on powerful servers and work on its SEO.</p>"
                 class=" project">
@@ -247,7 +253,7 @@
                 data-technologies="Node.js-MongoDB-SASS-jQuery-Bootstrap" data-plink="https://www.rollingrecords.fi/"
                 data-img="/img/rr-big.png"
                 data-text="<p>I' ve got to work on this project with a good friend of mine
-                <a class='link' href='https://www.linkedin.com/in/roman-tuomisto-a3780549' target='_blank'>Roman</a> since 2 years ago. I learned a lot going with this project and we had to solve real-world
+                <a class='link' href='https://www.linkedin.com/in/roman-tuomisto-a3780549' target='_blank' rel='noopener'>Roman</a> since 2 years ago. I learned a lot going with this project and we had to solve real-world
                 problems. </p><p>Because it was started years ago, it still uses technologies like jQuery and Ejs. We are working to migrate its front-end to React and add Typescript support and eventually write tests for different parts of it.</p>"
                 class="project">
                 <img src="/img/rr.png" alt="">
@@ -307,7 +313,7 @@
           <strong class="text">agile.8272@gmail.com</strong>
           <h3 class="heading-tertiary u-margin-top-sm">My LinkedIn account:</h3>
           <a class="link" href="https://www.linkedin.com/in/joseph-heidari"
-            target="_blank">linkedin.com/in/joseph-heidari</a>
+            target="_blank" rel="noopener">linkedin.com/in/joseph-heidari</a>
           <h3 class="heading-tertiary u-margin-top-sm">Set up a voice or video call with me:</h3>
           <p class="text">If you want to contact me thorw video or voice chat, I am available at
             <strong>Facetime</strong>,
@@ -353,7 +359,7 @@
     <footer class="footer">
       <p class="footer__text">Copyright &copy; 2020 Joseph Heidari.</p>
       <a class="footer__link" href="mailto:agile.8272@gmail.com"><img src="/img/google.svg" alt=""></a>
-      <a class="footer__link" href="https://www.linkedin.com/in/joseph-heidari" target="_blank"><img
+      <a class="footer__link" href="https://www.linkedin.com/in/joseph-heidari" target="_blank" rel="noopener"><img
           src="/img/linkedin.svg" alt=""></a>
     </footer>
 
@@ -380,8 +386,8 @@
           <h4 class="u-margin-top-xs">Technologies Used:</h4>
           <div class="technologies"></div>
           <div class="u-margin-top-sm">
-            <a href="" class="link-complete" target="_blank">Go to Project &rarr;</a>
-            <a href="" class="link-complete" target="_blank">Go to Source Code &rarr;</a>
+            <a href="" class="link-complete" target="_blank" rel="noopener">Go to Project &rarr;</a>
+            <a href="" class="link-complete" target="_blank" rel="noopener">Go to Source Code &rarr;</a>
           </div>
         </div>
       </div>
@@ -409,7 +415,9 @@
       </div>
     </div>
 
-    <script src="/app.js"></script>
+    <script>
+    "use strict";var a=document.querySelector("#contact-form");var s=document.querySelector("#contact-message-success");var r=document.querySelector("#contact-message-error");var e=document.querySelector("#contact-send-again");a.addEventListener("submit",function(e){document.querySelector("#loading").classList.remove("u-display-none");e.preventDefault();var t=document.querySelector("#name").value;var o=document.querySelector("#email").value;var n=document.querySelector("#message").value;var c=new XMLHttpRequest;c.onreadystatechange=function(){if(c.readyState==XMLHttpRequest.DONE){if(c.status===200){try{a.classList.add("u-display-none");r.classList.add("u-display-none");s.classList.remove("u-display-none");document.querySelector("#loading").classList.add("u-display-none")}catch(e){}}else{a.classList.add("u-display-none");r.classList.remove("u-display-none");s.classList.add("u-display-none");document.querySelector("#loading").classList.add("u-display-none")}}};c.open("POST","/contact",true);c.setRequestHeader("Content-Type","application/json");c.send(JSON.stringify({name:t,email:o,message:n}))});e.addEventListener("click",function(){a.classList.remove("u-display-none");r.classList.add("u-display-none");s.classList.add("u-display-none");document.querySelector("#message").value="";document.querySelector("#message").focus()});function smoothScroll(e,n){var e=document.querySelector(e);var c=e.getBoundingClientRect().top;var a=window.pageYOffset;var s=null;function animation(e){if(s===null)s=e;var t=e-s;var o=ease(t,a,c,n);window.scrollTo(0,o);if(t<n)requestAnimationFrame(animation)}function ease(e,t,o,n){e/=n/2;if(e<1)return o/2*e*e*e*e+t;e-=2;return-o/2*(e*e*e*e-2)+t}requestAnimationFrame(animation)}window.onscroll=function(){var e=window.pageYOffset|document.body.scrollTop;if(e>document.querySelector("#tasks").offsetTop+120){document.querySelector("#sticky-nav").classList.remove("u-display-none");setTimeout(function(){document.querySelector("#sticky-nav").style.opacity=1},200)}else{document.querySelector("#sticky-nav").style.opacity=0;setTimeout(function(){document.querySelector("#sticky-nav").classList.add("u-display-none")},200)}};document.addEventListener("click",function(e){if(document.activeElement.toString()=="[object HTMLButtonElement]"||document.activeElement.toString()=="javascript:void(0)"){document.activeElement.blur()}});document.querySelectorAll(".info").forEach(function(e){e.addEventListener("click",function(){this.classList.toggle("open");document.querySelectorAll(".info img").forEach(function(e){if(e.parentElement.classList.contains("open")){e.src="/img/up-arrow.svg"}else{e.src="/img/down-arrow.svg"}})})});document.querySelectorAll(".skill").forEach(function(e){e.addEventListener("click",function(e){var t=document.querySelector("#modal-skills");document.querySelector("#modal-skills h3").innerHTML=this.getAttribute("data-title")||e.target.text;document.querySelector("#modal-skills .mdl__body").innerHTML=this.getAttribute("data-desc");t.classList.remove("u-display-none")})});document.querySelectorAll(".project").forEach(function(e){e.addEventListener("click",function(e){var t=document.querySelector("#modal-projects");var o=this.getAttribute("data-plink");var n=this.getAttribute("data-slink");var c=this.getAttribute("data-img");var a=this.getAttribute("data-title");var s=this.getAttribute("data-text");var r=this.getAttribute("data-technologies").split("-");document.querySelector("#modal-projects h3").innerHTML=a;document.querySelectorAll("#modal-projects .link-complete")[0].href=o;if(n){document.querySelectorAll("#modal-projects .link-complete")[1].href=n;document.querySelectorAll("#modal-projects .link-complete")[1].classList.remove("u-display-none")}else{document.querySelectorAll("#modal-projects .link-complete")[1].classList.add("u-display-none")}document.querySelector("#modal-projects-img").src=c;document.querySelector("#modal-projects .mdl__text").innerHTML=s;document.querySelector("#modal-projects .technologies").innerHTML="";r.forEach(function(e){var t=document.createElement("div");t.setAttribute("class","skill-sm");t.textContent=e;document.querySelector("#modal-projects .technologies").append(t)});t.classList.remove("u-display-none")})});document.querySelectorAll(".mdl__close").forEach(function(e){e.addEventListener("click",function(e){var t=e.target.getAttribute("data-target");document.querySelector("#"+t).classList.add("u-display-none")})});
+    </script>
   </body>
 
 </html>
