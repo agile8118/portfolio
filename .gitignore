@@ -2,3 +2,4 @@ node_modules
 deploy.sh
 keys.js
 ecosystem.config.js
+.DS_Store
